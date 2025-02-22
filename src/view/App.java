@@ -1,5 +1,6 @@
 package view;
 import Entidades.Cliente;
+import Repositorio.RepositorioCliente;
 import Entidades.Equipamento;
 import Entidades.Aluguel;
 import java.util.ArrayList;
