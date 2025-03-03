@@ -16,10 +16,6 @@ public abstract class Pessoa {
 
     }
 
-    public void exibirInformação(){
-        
-    }
-
     public void setNomeCompleto(String novonomeCompleto) {
         this.nomeCompleto = novonomeCompleto;
     }

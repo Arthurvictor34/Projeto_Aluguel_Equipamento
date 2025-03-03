@@ -3,18 +3,29 @@ import java.util.ArrayList;
 import Entidades.Cliente;
 
 public class RepositorioCliente {
-    ArrayList<Cliente> listaCliente = new ArrayList<>();
+    private ArrayList<Cliente> listaCliente = new ArrayList<>();
 
     public void adicionarCliente(Cliente cliente){
         listaCliente.add(cliente);
     }
 
-    public void removerCliente(Cliente cliente){
-        listaCliente.remove(cliente);
+    public void removeClienteID(int id){
+        for(Cliente cliente: listaCliente){
+            if(cliente.getID() == id){
+               listaCliente.remove(cliente); 
+            }
+        }
+    }
+    
+
+    public void atualizarCliente(ArrayList<Cliente> cliente){
+        
     }
 
-    public ArrayList<Cliente> listaClientes(){
-        return listaCliente;
+    public void listaClientes() {
+        for (Cliente cliente : listaCliente) {
+            System.out.println(cliente);
+        }
     }
-
 }
+

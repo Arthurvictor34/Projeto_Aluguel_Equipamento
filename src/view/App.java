@@ -1,27 +1,24 @@
 package view;
-import Entidades.Cliente;
-import Repositorio.RepositorioCliente;
-import Entidades.Equipamento;
-import Entidades.Aluguel;
 import java.util.ArrayList;
 
+import Entidades.Cliente;
+import Repositorio.RepositorioCliente;
+import Serviço.ServicoCliente;
+
 public class App {
-
-    public static ArrayList<Cliente> fazerCliente(){
-        ArrayList<Cliente> cl = new ArrayList<>();
-        cl.add(new Cliente("Arthur Victor", 19, "123.456.789-10", "81-98856-8653", "emailteste@gmail.com"));
-        
-        cl.add(new Cliente("João Lucas", 39, "123.456.789-10", "81-98856-8653", "emailteste@gmail.com"));
-        
-        cl.add(new Cliente("Neymar Junior", 32, "123.643.234-12", "00-0000-0000", "EmailTeste1@gmail.com"));
-
-        for(Cliente clientes:cl){
-            System.out.println(clientes.toString());
-        }
-
-        return cl;
-    }
     public static void main(String[] args) {
-       ArrayList<Cliente> cli = fazerCliente();
+        RepositorioCliente repositorio = new RepositorioCliente();
+        ServicoCliente servico = new ServicoCliente(repositorio);
+        ArrayList<Cliente> cliente = new ArrayList<>();
+        
+        cliente.add(new Cliente("Luan Santana", 19, "null", "null", "null"));
+        cliente.add(new Cliente("Roberto", 10, "null", "null", "null"));
+        cliente.add(new Cliente("Lucas", 20, "null", "null", "null"));
+
+        servico.validarIdade(cliente);
+        servico.adicionarClienteIdade(cliente);
+        repositorio.listaClientes();
+
     }
 }
+

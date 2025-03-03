@@ -13,7 +13,9 @@ public class RepositorioEquipamento {
         listaEquipamentos.remove(equipamento);
     }
 
-    public ArrayList<Equipamento> listaEquipamento(){
-        return listaEquipamentos;
+    public void listaEquipamento(){  
+        for(Equipamento lista: listaEquipamentos){
+            System.out.println(lista);
+        }
     }
 }

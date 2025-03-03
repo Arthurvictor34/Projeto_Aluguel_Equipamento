@@ -4,6 +4,11 @@ public class Aluguel {
     private double custoAluguel;
     private double custoManutenção;
 
+    public Aluguel(double custoAluguel, double custoManutenção){
+        this.custoAluguel = custoAluguel;
+        this.custoManutenção = custoManutenção;
+    }
+
     public void setCustoAluguel(double novocustoAluguel) {
         this.custoAluguel = novocustoAluguel;
     }

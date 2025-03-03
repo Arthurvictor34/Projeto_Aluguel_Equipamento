@@ -2,12 +2,11 @@ package Entidades;
 
 public class Cliente extends Pessoa {
     private int id;
-    private static int numeroID = 1;
+    private static int contID = 1;
 
     public Cliente(String nomeCompleto, int idade, String cpf, String celular, String email){
         super(nomeCompleto, idade, cpf, celular, email);
-        this.id = numeroID;
-        numeroID++;
+        this.id = contID++;
     }
 
     public void setID(int novoid) {
@@ -19,7 +18,12 @@ public class Cliente extends Pessoa {
     }
 
     @Override
-    public String toString() { 
-        return "Nome:=" + this.getNomeCompleto() + " Idade=" + this.getIdade() + " Cadastro=" + this.getID();
+    public String toString() {
+        return "Cliente{id=" + id + 
+               ", nome='" + getNomeCompleto() + 
+               "', idade=" + getIdade() +
+               ", cpf='" + getCpf() + 
+               "', telefone='" + getCelular() + 
+               "', email='" +  getEmail() + "'}";
     }
 }

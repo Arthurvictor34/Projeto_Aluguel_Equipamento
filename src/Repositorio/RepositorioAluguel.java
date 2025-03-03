@@ -13,7 +13,9 @@ public class RepositorioAluguel {
         listaAluguel.remove(aluguel);
     }
 
-    public ArrayList<Aluguel> listaAluguel(){
-        return listaAluguel;
+    public void listaAluguel(){
+        for(Aluguel lista: listaAluguel){
+            System.out.println(lista);
+        }
     }
 }
