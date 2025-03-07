@@ -9,8 +9,15 @@ public class RepositorioAluguel {
         listaAluguel.add(aluguel);
     }
 
-    public void removerAluguel(Aluguel aluguel){
-        listaAluguel.remove(aluguel);
+    public boolean removerAluguelNumero(int numero){
+        for(Aluguel aluguel:listaAluguel){
+            if(aluguel.getNumeroAluguel() == numero){
+                listaAluguel.remove(aluguel);
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void listaAluguel(){

@@ -12,11 +12,16 @@ public class ServicoEquipamento {
 
     public boolean validaEquipamentoID(ArrayList<Equipamento> equipamentos){
         for(Equipamento Equipamentos: equipamentos){
-            if(Equipamentos.getId() > 0){
-                return true;
+            if(Equipamentos.getId() <= 0){
+                System.out.println("Equipamento Não foi validado");
+                return false;
             }
         }
-        return false;  
+        return true;  
+    }
+
+    public boolean removerEquipamentoID(int id){
+        return repositorio.removerEquipamentoID(id);
     }
 
     public boolean adicionarEquipamentgo(ArrayList<Equipamento> equipamento){

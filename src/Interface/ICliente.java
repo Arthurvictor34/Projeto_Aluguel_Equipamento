@@ -1,5 +1,5 @@
 package Interface;
 
-interface ICliente {
-    public void exibirInformação();
+public interface ICliente {
+    public void gerenciaCompras();
 }

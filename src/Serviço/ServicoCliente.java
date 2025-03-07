@@ -2,8 +2,9 @@ package Serviço;
 import Entidades.Cliente;
 import java.util.ArrayList;
 import Repositorio.RepositorioCliente;
+import Interface.ICliente;
 
-public class ServicoCliente {
+public class ServicoCliente implements ICliente {
     private RepositorioCliente repositorio;
 
     public ServicoCliente(RepositorioCliente repositorio) { 
@@ -17,18 +18,26 @@ public class ServicoCliente {
                 return false;
             }
         }
-        System.out.println("Idade foi validada");
         return true;
+    }
+
+    public boolean removerCliente(int ID){
+        return repositorio.removeClienteID(ID);
     }
     
     public boolean adicionarClienteIdade(ArrayList<Cliente> clientes) {
         boolean adicionou = false;
         for(Cliente cliente: clientes){
-            if(cliente.getIdade() >= 18){  // Verifica cada cliente individualmente
+            if(cliente.getIdade() >= 18){
                 repositorio.adicionarCliente(cliente);
                 adicionou = true;
             }
         }
         return adicionou;
+    }
+    
+    @Override
+    public void gerenciaCompras(){
+        
     }
 }

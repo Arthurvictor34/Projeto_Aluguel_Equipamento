@@ -9,8 +9,15 @@ public class RepositorioEquipamento {
         listaEquipamentos.add(equipamento);
     }
 
-    public void removerEquipamento(Equipamento equipamento){
-        listaEquipamentos.remove(equipamento);
+    public boolean removerEquipamentoID(int ID){
+        for(Equipamento equipamentos: listaEquipamentos){
+            if(equipamentos.getId() == ID){
+                listaEquipamentos.remove(equipamentos);
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void listaEquipamento(){  

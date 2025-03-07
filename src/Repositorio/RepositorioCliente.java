@@ -9,12 +9,14 @@ public class RepositorioCliente {
         listaCliente.add(cliente);
     }
 
-    public void removeClienteID(int id){
+    public boolean removeClienteID(int id){
         for(Cliente cliente: listaCliente){
             if(cliente.getID() == id){
                listaCliente.remove(cliente); 
+               return true;
             }
         }
+        return false;
     }
     
 

@@ -4,7 +4,13 @@ public class Equipamento {
     private String nomeEquipamento;
     private String tipoEquipamento;
     private int id;
+    private static int contID = 1;
 
+    public Equipamento(String nomeEquipamento, String tipoEquipamento){
+        this.nomeEquipamento = nomeEquipamento;
+        this.tipoEquipamento = tipoEquipamento;
+        this.id = contID++;
+    }
     public void setNomeEquipamento(String novonomeEquipamento) {
         this.nomeEquipamento = novonomeEquipamento;
     }
@@ -28,5 +34,12 @@ public class Equipamento {
     public int getId() {
         return this.id;
     }
+
+    @Override
+    public String toString() {
+        
+        return "Equipamento{id=" + id + ", nome=" + getNomeEquipamento() + ", Tipo=" + getTipoEquipamento() +"}";
+
+    }           
 
 }

@@ -1,5 +1,7 @@
 package Interface;
 
-interface IAluguel {
-    public void exibirInformação();
+public interface IAluguel {
+    public void CalcularAluguel();
+
+    public void CalcularManutenção();
 }

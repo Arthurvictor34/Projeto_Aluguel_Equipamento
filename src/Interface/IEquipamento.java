@@ -1,6 +1,6 @@
 package Interface;
 
-interface IEquipamento {
+public interface IEquipamento {
     public void exibirInformação();
     
 }
