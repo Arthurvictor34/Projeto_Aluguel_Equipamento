@@ -2,13 +2,13 @@ package Entidades;
 
 public class Aluguel {
     private double custoAluguel;
-    private double custoManutenção;
+    private double custoManutencao;
     private int numeroAluguel;
     private static int autoIncremento = 1;
 
-    public Aluguel(double custoAluguel, double custoManutenção){
+    public Aluguel(double custoAluguel, double custoManutencao){
         this.custoAluguel = custoAluguel;
-        this.custoManutenção = custoManutenção;
+        this.custoManutencao = custoManutencao;
         this.numeroAluguel = autoIncremento++;
     }
 
@@ -20,12 +20,12 @@ public class Aluguel {
         return this.custoAluguel;
     }
 
-    public void setCustoManutenção(double novocustoManutenção) {
-        this.custoManutenção = novocustoManutenção;
+    public void setCustoManutençao(double novocustoManutencao) {
+        this.custoManutencao = novocustoManutencao;
     }
 
-    public double getCustoManutenção() {
-        return custoManutenção;
+    public double getCustoManutencao() {
+        return custoManutencao;
     }
 
     public void setNumeroAluguel(int numeroAluguel) {
@@ -38,6 +38,6 @@ public class Aluguel {
 
     @Override
     public String toString() {
-        return "Cliente{Custo de aluguel=" + getCustoAluguel() + ", Custo de manutenção=" + getCustoManutenção() + ", Numero do aluguel: " + getNumeroAluguel() + "}";
+        return "Cliente{Custo de aluguel=" + getCustoAluguel() + ", Custo de manutenção=" + getCustoManutencao() + ", Numero do aluguel: " + getNumeroAluguel() + "}";
     }
 }

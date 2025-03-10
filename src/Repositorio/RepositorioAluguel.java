@@ -20,6 +20,10 @@ public class RepositorioAluguel {
         return false;
     }
 
+    public void atualizarAluguel(){
+
+    }
+
     public void listaAluguel(){
         for(Aluguel lista: listaAluguel){
             System.out.println(lista);

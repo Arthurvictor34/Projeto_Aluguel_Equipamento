@@ -20,6 +20,10 @@ public class RepositorioEquipamento {
         return false;
     }
 
+    public void atualizarEquipamento(){
+        
+    }
+
     public void listaEquipamento(){  
         for(Equipamento lista: listaEquipamentos){
             System.out.println(lista);
