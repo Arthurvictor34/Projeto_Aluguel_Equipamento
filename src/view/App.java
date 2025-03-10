@@ -38,7 +38,7 @@ public class App {
 
         equipamentos.add(new Equipamento("Picareta", "Manual"));
         equipamentos.add(new Equipamento("Machado", "Manual"));
-        equipamentos.add(new Equipamento(null, null));
+        equipamentos.add(new Equipamento("Enxada", "Manual"));
         servicoEqui.validaEquipamentoID(equipamentos);
         servicoEqui.adicionarEquipamentgo(equipamentos);
         repositorioEqui.listaEquipamento();
