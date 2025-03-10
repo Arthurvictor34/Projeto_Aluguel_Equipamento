@@ -3,5 +3,5 @@ package Interface;
 public interface IAluguel {
     public void CalcularAluguel();
 
-    public void CalcularManutenção();
+    public void CalcularManutencao();
 }
