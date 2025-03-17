@@ -1,56 +1,42 @@
 package view;
 
 import java.util.ArrayList;
+
 import Entidades.Cliente;
-import Repositorio.RepositorioCliente;
-import Serviço.ServicoCliente;
+import Repositorio.ClienteRepositorio;
+import Serviço.ClienteServico;
+
 import Entidades.Equipamento;
-import Serviço.ServicoEquipamento;
-import Repositorio.RepositorioEquipamento;
+import Serviço.EquipamentoServico;
+import Repositorio.EquipamentoRepositorio;
+
 import Entidades.Aluguel;
-import Serviço.ServicoAluguel;
-import Repositorio.RepositorioAluguel;
+import Serviço.AluguelServico;
+import Repositorio.AluguelRepositorio;
 
 public class App {
     public static void main(String[] args) {
-        RepositorioCliente repositorio = new RepositorioCliente();
-        ServicoCliente servico = new ServicoCliente(repositorio);
-        ArrayList<Cliente> cliente = new ArrayList<>();
+        ArrayList<Equipamento> equipamentos= new ArrayList<>();
+        EquipamentoRepositorio equipamentoRepositorio = new EquipamentoRepositorio(equipamentos);
+        EquipamentoServico equipamentoServico = new EquipamentoServico(equipamentoRepositorio);
+        Equipamento equipamento = new Equipamento("Machado", "Manual");
+        equipamentoServico.cadastra(equipamento);
+        equipamentoServico.listar();
 
-        RepositorioEquipamento repositorioEqui = new RepositorioEquipamento();
-        ServicoEquipamento servicoEqui = new ServicoEquipamento(repositorioEqui);
-        ArrayList<Equipamento> equipamentos = new ArrayList<>();
+        ArrayList<Cliente> clientes = new ArrayList<>();
+        ClienteRepositorio clienteRepositorio = new ClienteRepositorio(clientes);
+        ClienteServico clienteServico = new ClienteServico(clienteRepositorio);
+        Cliente cliente = new Cliente("Carlos Santos", 19, "123.422.154-12", "81 99857-3245", "EmailTeste@gmail.com");
+        clienteServico.cadastra(cliente);
+        clienteServico.listar();
 
-        RepositorioAluguel repositorioAluguel = new RepositorioAluguel();
-        ServicoAluguel servicoAluguel = new ServicoAluguel(repositorioAluguel);
-        ArrayList<Aluguel> aluguel = new ArrayList<>();
-        
-        cliente.add(new Cliente("Luan Santana", 19, "null", "null", "null"));
-        cliente.add(new Cliente("Roberto", 21, "null", "null", "null"));
-        cliente.add(new Cliente("Lucas", 20, "null", "null", "null"));
-        cliente.add(new Cliente("Luana", 22, "null", "null", "null"));
-        servico.validarIdade(cliente);
-        servico.adicionarClienteIdade(cliente);
-        servico.removerCliente(3);
-        repositorio.listaClientes();
-
-        System.out.println("");
-
-        equipamentos.add(new Equipamento("Picareta", "Manual"));
-        equipamentos.add(new Equipamento("Machado", "Manual"));
-        equipamentos.add(new Equipamento("Enxada", "Manual"));
-        servicoEqui.validaEquipamentoID(equipamentos);
-        servicoEqui.adicionarEquipamentgo(equipamentos);
-        repositorioEqui.listaEquipamento();
-
-        System.out.println("");
-
-        aluguel.add(new Aluguel(100, 32));
-        aluguel.add(new Aluguel(120, 22));
-        aluguel.add(new Aluguel(89, 30));
-        servicoAluguel.validarAluguel(aluguel);
-        servicoAluguel.adicionarAluguel(aluguel);
-        repositorioAluguel.listaAluguel();
+        ArrayList<Aluguel> algueis = new ArrayList<>();
+        AluguelRepositorio aluguelRepositorio = new AluguelRepositorio(algueis);
+        AluguelServico aluguelServico = new AluguelServico(aluguelRepositorio);
+        Aluguel aluguel = new Aluguel(200);
+        aluguelServico.calcularManutencao(aluguel);
+        aluguelServico.cadastra(aluguel);
+        aluguelServico.listar();
 
     }
 }

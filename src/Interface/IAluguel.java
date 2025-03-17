@@ -1,7 +1,8 @@
 package Interface;
 
-public interface IAluguel {
-    public void CalcularAluguel();
+import Entidades.Aluguel;
 
-    public void CalcularManutencao();
+public interface IAluguel {
+    public void calcularManutencao(Aluguel Aluguel);
+
 }

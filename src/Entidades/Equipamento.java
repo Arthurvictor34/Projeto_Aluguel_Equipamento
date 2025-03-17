@@ -38,7 +38,7 @@ public class Equipamento {
     @Override
     public String toString() {
         
-        return "Equipamento{id=" + id + ", nome=" + getNomeEquipamento() + ", Tipo=" + getTipoEquipamento() +"}";
+        return "Equipamento{id= " + id + ", nome= " + getNomeEquipamento() + ", Tipo= " + getTipoEquipamento() +"}";
 
     }           
 

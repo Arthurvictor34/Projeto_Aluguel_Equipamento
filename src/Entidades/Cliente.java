@@ -19,6 +19,6 @@ public class Cliente extends Pessoa {
 
     @Override
     public String toString() {
-        return "Cliente{id=" + id + ", nome=" + getNomeCompleto() + ", idade=" + getIdade() + ", cpf'" + getCpf() + ", telefone='" + getCelular() + ", email='" +  getEmail() + "}";
+        return "Cliente{id=" + id + ", nome=" + getNomeCompleto() + ", idade=" + getIdade() + ", cpf=" + getCpf() + ", telefone=" + getCelular() + ", email=" +  getEmail() + "}";
     }
 }

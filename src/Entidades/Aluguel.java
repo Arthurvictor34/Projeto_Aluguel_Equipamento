@@ -6,9 +6,8 @@ public class Aluguel {
     private int numeroAluguel;
     private static int autoIncremento = 1;
 
-    public Aluguel(double custoAluguel, double custoManutencao){
+    public Aluguel(double custoAluguel){
         this.custoAluguel = custoAluguel;
-        this.custoManutencao = custoManutencao;
         this.numeroAluguel = autoIncremento++;
     }
 
@@ -38,6 +37,6 @@ public class Aluguel {
 
     @Override
     public String toString() {
-        return "Cliente{Custo de aluguel=" + getCustoAluguel() + ", Custo de manutenção=" + getCustoManutencao() + ", Numero do aluguel: " + getNumeroAluguel() + "}";
+        return "Cliente{Custo de aluguel= " + getCustoAluguel() + ", Custo de manutenção= " + getCustoManutencao() + ", Numero do aluguel= " + getNumeroAluguel() + "}";
     }
 }
