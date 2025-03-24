@@ -2,9 +2,9 @@ package Serviço;
 
 import Entidades.Aluguel;
 import Repositorio.AluguelRepositorio;
-import Interface.IAluguel;
+import Interface.IAluguelServico;
 
-public class AluguelServico implements IAluguel{
+public class AluguelServico implements IAluguelServico{
     private AluguelRepositorio aluguelRepositorio;
     
     public AluguelServico(AluguelRepositorio aluguelRepositorio){
