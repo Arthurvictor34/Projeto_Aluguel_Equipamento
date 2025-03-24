@@ -12,7 +12,7 @@ public class AluguelServico implements IAluguel{
     }
     
     public void cadastra(Aluguel aluguel){
-         aluguelRepositorio.salvar(aluguel);
+        aluguelRepositorio.salvar(aluguel);
     }
     
     public void excluir(Aluguel aluguel){
@@ -26,7 +26,6 @@ public class AluguelServico implements IAluguel{
     public void calcularManutencao(Aluguel Aluguel){
         double calculo = 0;
         calculo = (Aluguel.getCustoAluguel() * 50) / 100;
-
         Aluguel.setCustoManutençao(calculo);
     } 
 
